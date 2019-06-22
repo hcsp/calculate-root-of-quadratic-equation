@@ -16,7 +16,7 @@ public class Solution {
     // 提示，你可利用求根公式x=[-b±√(b²-4ac)]/2a
     // 需要执行开方运算时可使用Math.sqrt()方法
     public static double[] calculate(int a, int b, int c) {
-
+        if(b*b - 4*a*c<0) return new double[] {};
         double[] x={1.0*(-b+Math.sqrt(b*b - 4*a*c))/2/a , 1.0*(-b-Math.sqrt(b*b - 4*a*c))/2/a};
         return x;
     }
