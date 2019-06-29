@@ -18,14 +18,18 @@ public class Solution {
     public static double[] calculate(int a, int b, int c) {
         int root = b * b - 4 * a * c;
         boolean hasTwoRoot = root > 0;
+        boolean hasOneRoot = root == 0;
         if (hasTwoRoot) {
             double root1 = (-b + Math.sqrt(root)) / (2 * a);
             double root2 = (-b - Math.sqrt(root)) / (2 * a);
             double[] roots = {root1, root2};
             return roots;
-        } else {
+        } else if (hasOneRoot) {
             double rootOnly = -b / (2 * a);
             double[] roots = {rootOnly};
+            return roots;
+        } else {
+            double[] roots = {};
             return roots;
         }
     }
