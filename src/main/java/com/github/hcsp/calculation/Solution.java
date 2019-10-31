@@ -20,13 +20,13 @@ public class Solution {
 
         if(deta>0){
             double[] num = new double[2];
-            num[0] = -b+deta;
-            num[1] = -b-deta;
+            num[0] = (-b+Math.sqrt(deta))/(2*a);
+            num[1] = (-b-Math.sqrt(deta))/(2*a);
             return num;
         }
         else if (deta==0){
             double[] num = new double[1];
-            num[0] = -b+deta;
+            num[0] = (-b+Math.sqrt(deta))/(2*a);
             return num;
         }
         else
