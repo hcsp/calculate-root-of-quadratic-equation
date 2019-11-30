@@ -20,6 +20,6 @@ public class Solution {
         if ( temp < 0 ) return new double[] {};
         double v1 = (-b + Math.sqrt(temp)) / 2 * a;
         double v2 = (-b - Math.sqrt(temp)) / 2 * a;
-        return v1 == v2 ?  new double[] {v1} :  new double[] {v1, v2};
+        return v1 == v2 ?  new double[] {v1} :  new double[] {v2, v1};
     }
 }
