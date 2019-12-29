@@ -18,14 +18,11 @@ public class Solution {
     public static double[] calculate(int a, int b, int c) {
         double delta = Math.sqrt(b^2 - 4 * a * c);
         if (delta > 0) {
-           double[] answer = new double[]{(-b + delta) / 2 * a, (-b - delta) / 2 * a};
-           return answer;
-        } else if (delta == 0) {
-            double[] answer = new double[]{(-b + delta) / 2};
-            return answer;
+            return new double[]{(-b + delta) / (2 * a), (-b - delta) / (2 * a)};
+        } else if (Math.abs(delta - 0) < 1e-7) {
+            return new double[]{(-b + delta) / (2 * a)};
         } else {
-            double answer[] = new double[] {};
-            return answer;
+            return new double[] {};
         }
     }
 }
