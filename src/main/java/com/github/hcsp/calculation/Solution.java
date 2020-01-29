@@ -19,18 +19,15 @@ public class Solution {
         double d = b * b - 4 * a * c;
         if (d > 0) {
             double[] x = new double[2];
-            x[0] = (0 - b + Math.sqrt(d) ) / 2.0 * a;
-            x[1] = (0 - b - Math.sqrt(d) ) / 2.0 * a;
+            x[0] = (- b + Math.sqrt(d) ) / 2.0 * a;
+            x[1] = (- b - Math.sqrt(d) ) / 2.0 * a;
             return x;
         }
         else if(d == 0) {
             double[] x = new double[1];
-            x[0] = (0 - b) / 2.0 * a;
+            x[0] = (-b) / 2.0 * a;
             return x;
         }
-        else {
-            double[] x = new double[] {};
-            return x;
-        }
+         return new double[] {};
     }
 }
