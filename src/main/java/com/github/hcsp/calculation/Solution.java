@@ -24,10 +24,12 @@ public class Solution {
             root[0] = (-b + Math.sqrt(d)) / (2.0 * a);
             root[1] = (-b - Math.sqrt(d)) / (2.0 * a);
             return root;
-        } else if (d == 0) {
-            double[] root = new double[1];
-            root[0] = (-b) / 2.0 * a;
-            return root;
+        } else {
+            if (d == 0) {
+                double[] root = new double[1];
+                root[0] = (-b) / 2.0 * a;
+                return root;
+            }
         }
         return new double[]{};
     }
