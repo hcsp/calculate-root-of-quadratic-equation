@@ -19,7 +19,7 @@ public class Solution {
         if(b * b == 4 * a * c){
             return new double[]{-b/(2*a)};
         }else if(b * b < 4 * a * c){
-            return null;
+            return new double[]{};
         }else{
             double res1 = (-b - Math.sqrt(b*b - 4*a*c)) / (2*a);
             double res2 = (-b + Math.sqrt(b*b - 4*a*c)) / (2*a);
