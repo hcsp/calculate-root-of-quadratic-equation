@@ -18,12 +18,14 @@ public class Solution {
     public static double[] calculate(int a, int b, int c) {
         double x = (-b + Math.sqrt(b*b - 4*a*c)) / 2*a;
         double y = (-b - Math.sqrt(b*b - 4*a*c)) / 2*a;
-        if(Double.isNaN(x) != true && Double.isNaN(y) != true) {
+        if(Double.isNaN(x) != true && Double.isNaN(y) != true && x != y) {
             return new double[] {x, y};
         } else if(Double.isNaN(x) != true && Double.isNaN(y) == true) {
             return new double[] {x};
         } else if(Double.isNaN(x) == true && Double.isNaN(y) != true){
             return new double[] {y};
+        } else if(Double.isNaN(x) != true && Double.isNaN(y) != true && x == y) {
+            return new double[] {x};
         } else {
             return new double[] {};
         }
