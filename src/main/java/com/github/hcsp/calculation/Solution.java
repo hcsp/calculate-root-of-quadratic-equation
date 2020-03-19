@@ -20,13 +20,13 @@ public class Solution {
 
         int sqrt = (b ^ 2 - 4 * a * c);
 
-        int i = (int)(-b + Math.sqrt(sqrt)) / (2 * a);
-        int j = (int)(-b - Math.sqrt(sqrt)) / (2 * a);
+        int i = (int) (-b + Math.sqrt(sqrt)) / (2 * a);
+        int j = (int) (-b - Math.sqrt(sqrt)) / (2 * a);
 
         if (sqrt < 0) {
             return new double[]{};
         } else if (sqrt > 0) {
-            return new double[]{i,j};
+            return new double[]{i, j};
         } else {
             return new double[]{i};
         }
