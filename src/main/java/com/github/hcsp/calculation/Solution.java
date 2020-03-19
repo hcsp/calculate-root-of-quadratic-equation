@@ -18,7 +18,7 @@ public class Solution {
     // 需要执行开方运算时可使用Math.sqrt()方法
     public static double[] calculate(int a, int b, int c) {
 
-        int sqrt = (b ^ 2 - 4 * a * c);
+        int sqrt = (b * b - 4 * a * c);
 
         int i = (int) (-b + Math.sqrt(sqrt)) / (2 * a);
         int j = (int) (-b - Math.sqrt(sqrt)) / (2 * a);
@@ -34,5 +34,4 @@ public class Solution {
 
 
 }
-
 
