@@ -17,7 +17,7 @@ public class Solution {
     // 需要执行开方运算时可使用Math.sqrt()方法
     public static double[] calculate(int a, int b, int c) {
         double root1, root2;
-        double sign = b ^ 2 - 4 * a * c;
+        double sign = b * b - 4 * a * c;
         if (sign < 0) {
             return new double[]{};
         } else if (sign > 0) {
