@@ -24,7 +24,7 @@ public class Solution {
             return new double[]{};
         }
         else if (x == 0) {
-            return new double[]{-b/(2*a)};
+            return new double[]{(-b+Math.sqrt(x))/(2*a)};
         } else
         {
             return new double[]{(-b+Math.sqrt(x))/2*a, (-b-Math.sqrt(x))/2*a};
