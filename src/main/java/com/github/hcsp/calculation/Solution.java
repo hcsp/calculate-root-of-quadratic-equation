@@ -20,14 +20,14 @@ public class Solution {
     // 需要执行开方运算时可使用Math.sqrt()方法
     public static double[] calculate(int a, int b, int c) {
         double x = b*b-4*a*c;
-        if (x < 0) {
-            return new double[]{};
+        if (x<0) {
+            return new double[] {};
         }
         else if (x == 0) {
-            return new double[]{(-b+Math.sqrt(x))/(2*a)};
+            return new double[] {-b / (2 * a)};
         } else
         {
-            return new double[]{(-b+Math.sqrt(x))/2*a, (-b-Math.sqrt(x))/2*a};
+            return new double[] {(-b+Math.sqrt(x))/(2*a), (-b-Math.sqrt(x))/(2*a)};
         }
     }
 }
