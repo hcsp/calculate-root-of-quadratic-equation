@@ -1,8 +1,5 @@
 package com.github.hcsp.calculation;
 
-import com.sun.deploy.security.SelectableSecurityManager;
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-
 import java.util.Arrays;
 
 public class Solution {
