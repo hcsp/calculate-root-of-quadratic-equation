@@ -24,8 +24,7 @@ public class Solution {
             double x2 = (-b - Math.sqrt(delta)) / (2 * a);
             return new double[] {x1, x2};
         } else if (delta == 0) {
-            double v = (-b + Math.sqrt(delta)) / (2 * a);
-            return new double[] {v};
+            return new double[] {(-b + Math.sqrt(delta)) / (2 * a)};
         }
     }
 }
