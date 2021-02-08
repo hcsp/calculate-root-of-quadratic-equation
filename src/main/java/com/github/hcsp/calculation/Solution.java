@@ -11,9 +11,22 @@ public class Solution {
 
     // 计算一元二次方程ax^2+bx+c=0的根。
     // 若有两个根，返回一个数组，包含这两个根，即：new double[] { root1, root2 }
-    // 若有一个根，返回一个数组，包含这个根，即：n返回new double[] { root }
+    // 若有一个根，返回一个数组，包含这个根，即：n返回v
     // 若没有根，返回一个空数组，即：new double[] {}
     // 提示，你可利用求根公式x=[-b±√(b²-4ac)]/2a
     // 需要执行开方运算时可使用Math.sqrt()方法
-    public static double[] calculate(int a, int b, int c) {}
+    public static double[] calculate(int a, int b, int c) {
+        double dt =b * b - 4 * a * c;
+        if (dt < 0){
+            return  new double[]{};
+        }
+        else {
+            if(dt == 0){
+                return new double[]{-b * 0.5 / a};
+            }
+            else{
+                return new double[]{(-b + Math.sqrt(dt)) * 0.5 / a , (-b - Math.sqrt(dt)) * 0.5 / a};
+            }
+        }
+    }
 }
