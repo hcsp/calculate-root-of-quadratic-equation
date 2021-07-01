@@ -16,16 +16,20 @@ public class Solution {
     // 提示，你可利用求根公式x=[-b±√(b²-4ac)]/2a
     // 需要执行开方运算时可使用Math.sqrt()方法
     public static double[] calculate(int a, int b, int c) {
-        double[] x = new double[2];
-        if (Math.sqrt(b * b - 4 * a * c) > 0) {
-            x[0] = (-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a);
-            x[1] = (-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a);
-        } else if (Math.sqrt(b * b - 4 * a * c) == 0) {
-            x[0] = (-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a);
-        } else if (Math.sqrt(b * b - 4 * a * c) < 0) {
-            return x;
+        int temp = b * b - 4 * a * c;
+        if (a == 0) {
+            throw new Error("This is not a equation!");
         }
-        return x;
+        if (Math.sqrt(temp) > 0) {
+            double x1 = (-b + Math.sqrt(temp)) / (2 * a);
+            double x2 = (-b - Math.sqrt(temp)) / (2 * a);
+            return new double[]{x1, x2};
+        } else if (Math.sqrt(temp) == 0) {
+            double x1 = (-b + Math.sqrt(temp)) / (2 * a);
+            return new double[]{x1};
+        } else if (Math.sqrt(temp) < 0) {
+            return new double[]{};
+        }return new double[]{};
     }
 }
 
