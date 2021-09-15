@@ -17,24 +17,23 @@ public class Solution {
     // 需要执行开方运算时可使用Math.sqrt()方法
     public static double[] calculate(int a, int b, int c) {
 
-        double x,y,z;
+        double root1,root2,root;
 
-        z = Math.sqrt(b^2-4*a*c);
+        if(b * b - 4 * a * c > 0 ){
 
-        x = -b+z/2*a;
+            root1 = (- b + Math.sqrt(b * b - 4 * a * c))/2*a;
 
-        y = -b-z/2*a;
+            root2 = (- b - Math.sqrt(b * b - 4 * a * c))/2*a;
 
-        if(x==0&y==0){
-            return new double[]{};
-        }else if(x!=0&y==0){
-            return new double[]{x};
-        }else if(x==0&y!=0){
-            return new double[]{y};
+            return new double[]{root1,root2};
+        }else if(b * b - 4 * a * c == 0){
+
+            root = -b/2*a;
+
+            return new double[]{root};
         }else{
-            return new double[]{x,y};
+            return new double[]{};
         }
-
 
     }
 }
