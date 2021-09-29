@@ -21,7 +21,6 @@ public class Solution {
 
 
        Boolean result = root1 == root2;
-
         if (result == null) {
             return new double[]{};
         } else if (result) {
