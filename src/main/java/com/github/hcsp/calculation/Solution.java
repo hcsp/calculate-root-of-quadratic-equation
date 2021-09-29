@@ -28,6 +28,6 @@ public class Solution {
 //        } else
 //          return new double[]{root1, root2};
         // 利用三元运算符来精简if-else 判断运算符真的好香啊
-       return  result == null ? (new double[] {}) : (result? new double[] {root1}: new double[]{root1,root2});
+       return  result == null ? (new double[] {}) : (result ? new double[] {root1} : new double[]{root1 , root2});
     }
 }
