@@ -19,15 +19,16 @@ public class Solution {
        double root1 =  (-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a);
        double root2 =  (-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a);
 
+
        Boolean result = root1 == root2;
 
-//        if (result == null) {
-//            return new double[]{};
-//        } else if (result) {
-//            return new double[]{root1};
-//        } else
-//          return new double[]{root1, root2};
+        if (result == null) {
+            return new double[]{};
+        } else if (result) {
+            return new double[]{root1};
+        } else
+          return new double[]{root1, root2};
         // 利用三元运算符来精简if-else 判断运算符真的好香啊
-       return  result == null ? (new double[] {}) : (result ? new double[] {root1} : new double[]{root1 , root2});
+//       return  result == null ? (new double[] {}) : (result ? new double[] {root1} : new double[]{root1 , root2});
     }
 }
