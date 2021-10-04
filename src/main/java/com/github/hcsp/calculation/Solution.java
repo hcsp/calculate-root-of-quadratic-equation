@@ -23,10 +23,10 @@ public class Solution {
        int p1 =  - b;
        double p2 = Math.sqrt(p4);
        int  p3=2 * a;
-        double result = (p1 + p2) / p3;
+        double result1 = (p1 + p2) / p3;
         double result2 = (p1 - p2) / p3;
-        if (result == result2) {
-            return new double[]{result};
+        if (result1 == result2) {
+            return new double[]{result1};
         } else {
             return  new double[]{result2};
         }
