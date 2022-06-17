@@ -16,18 +16,15 @@ public class Solution {
     // 提示，你可利用求根公式x=[-b±√(b²-4ac)]/2a
     // 需要执行开方运算时可使用Math.sqrt()方法
     public static double[] calculate(int a, int b, int c) {
-        int delta = b * b - 4 * a * c;
-        if (delta > 0) {
-            return new double[]{
-                    //Math.sqrt(delta))返回double类型，前面就没必要强制类型转换成double类
-//                    (double) (-b + Math.sqrt(delta)) / (2 * a), (double) (-b - Math.sqrt(delta)) / (2 * a)
-                (-b + Math.sqrt(delta)) / (2 * a), (-b - Math.sqrt(delta)) / (2 * a)
-            };
-        } else if (delta == 0) {
-            //定义了double类型的数组，里面也要强制类型转换
-            return new double[] {(double)(-b)/(2*a)};
-        } else {
-            return new double[] {};
+        double d = Math.sqrt(b * b - 4 * a * c);
+        if (Double.isNaN(d)) {
+            return new double[]{};
         }
+        double r1 = (-b + d) / (2 * a);
+        double r2 = (-b - d) / (2 * a);
+        if (Math.abs(d - 0.0) < 0.000001) {
+            return new double[]{r1};
+        }
+        return new double[]{r1, r2};
     }
 }
