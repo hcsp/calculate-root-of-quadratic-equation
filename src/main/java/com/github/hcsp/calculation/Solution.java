@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 public class Solution {
     public static void main(String[] args) {
-//        System.out.println(Arrays.toString(new double[] {(-3)/(2*1)}));
         System.out.println("x^2-2x+1=0的解是：" + Arrays.toString(calculate(1, -2, 1)));
         System.out.println("x^2-4=0的解是：" + Arrays.toString(calculate(1, 0, -4)));
         System.out.println("x^2+1=0的解是：" + Arrays.toString(calculate(1, 0, 1)));
@@ -25,8 +24,7 @@ public class Solution {
                 (-b + Math.sqrt(delta)) / (2 * a), (-b - Math.sqrt(delta)) / (2 * a)
             };
         } else if (delta == 0) {
-            //定义了double类型的数组，里面就没必要强制类型转换
-//            return new double[] {(double)(-b)/(2*a)};
+            //定义了double类型的数组，里面也要强制类型转换
             return new double[] {(double)(-b)/(2*a)};
         } else {
             return new double[] {};
