@@ -21,9 +21,11 @@ public class Solution {
         if (res1 > 0) {
             return new double[] {res2, (-b - Math.sqrt(res1)) / 2 * a};
         }
-        else if (res1 == 0)
-            return new double[] {res2};
-        else
-            return new double[] {};
+        else if (res1 == 0) {
+            return new double[]{res2};
+        }
+        else {
+            return new double[]{};
+        }
     }
 }
