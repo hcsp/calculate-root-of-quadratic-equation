@@ -17,10 +17,10 @@ public class Solution {
     // 需要执行开方运算时可使用Math.sqrt()方法
     public static double[] calculate(int a, int b, int c) {
         double root1,root2;
-        double temp_value = Math.sqrt((double)(b*b-4*a*c));
+        double temp_value = Math.sqrt(b*b-4*a*c);
         if(temp_value>0){
             root1 = (-b+temp_value)/2*a;
-            root2 = (b+temp_value)/2*a;
+            root2 = (-b-temp_value)/2*a;
             return new double[]{root1,root2};
         }else if(temp_value ==0){
             return new double[]{(b+temp_value)/2*a};
