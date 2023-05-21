@@ -23,7 +23,7 @@ public class Solution {
             root2 = (-b-Math.sqrt(temp_value))/2*a;
             return new double[]{root1,root2};
         }else if(temp_value ==0){
-            return new double[]{(double)b/2*a};
+            return new double[]{(double)-b/2*a};
         }else{
             return new double[]{};
         }
