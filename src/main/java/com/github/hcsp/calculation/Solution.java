@@ -22,7 +22,7 @@ public class Solution {
         if (Double.isNaN(x1) || Double.isNaN(x2)) {
             return new double[]{};
         }
-        if (Math.abs(x1 - x2) > 1e-5) {
+        if (Math.abs(x1 - x2) < 1e-5) {
             return new double[]{x1};
         }
         return new double[]{x1, x2};
