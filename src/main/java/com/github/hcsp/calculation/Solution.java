@@ -22,7 +22,7 @@ public class Solution {
             double root1 = (-b + Math.sqrt(Math.pow(b,2) - 4 * a * c)) / 2 * a;
             double root2 = (-b - Math.sqrt(Math.pow(b,2) - 4 * a * c)) / 2 * a;
 
-            if (Math.abs(root1 - root2) < 1e10) {
+            if (root1 - root2 < 0.0001) {
                 return new double[]{root1};
             } else {
                 return new double[]{root1, root2};
